@@ -7,7 +7,9 @@ ARG USER_GID=${USER_UID}
 ENV BUN_INSTALL=/bun
 RUN sudo mkdir -p ${BUN_INSTALL} \
     && curl -fsSL https://bun.sh/install | bash \
-    && chown -R ${USERNAME} /bun
+    && chown -R ${USERNAME} /bun \
+    && curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - \
+    && apt install -y nodejs 
 
 ENV PATH=${BUN_INSTALL}/bin:${PATH}
 
