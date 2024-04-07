@@ -1,13 +1,25 @@
-# 📄 devContainer-bun
+# 📄 devContainer_EQB
 
-A vs-code dev container for bun
+Dev container with :
+
+- Bun
+- Elysia
+- Drizzle
+- SQLite
 
 ## 🔧 Requirement
 
 - Docker
-- VS-code
+- VS-Code
 - Dev containers extension (microsoft)
 
+## Usage
 
-## 📝 To Do :
-  - ...
+```bash
+cd app && bun i # Install dependency
+bun run db:migrate # Make migration
+bun run db:push # Push migration
+bun run dev # Run dev server
+bun run lint # Run eslint
+bun run format # Run prettier
+```
